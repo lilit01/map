@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+.swiper {
+  width: 1216px;
+  padding-bottom: 55px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 386px;
+  height: 212px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.swiper-pagination-bullet-active {
+  background: #7b61ff;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+.gradient {
+  background-image: linear-gradient(
+    320deg,
+    hsl(0deg 0% 100%) 0%,
+    hsl(249deg 63% 87%) 1%,
+    hsl(249deg 63% 87%) 13%,
+    hsl(0deg 0% 100%) 68%
+  );
+
+  width: 100%;
+  padding: 10rem;
+}
+.tabComponent {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  height: 100%;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.mapboxgl-ctrl-attrib {
+  display: none;
+}
+.mui-1thv8ag-MuiTabs-root {
+  width: 100%;
+}
+.mui-heg063-MuiTabs-flexContainer {
+  width: 100%;
+  justify-content: space-around;
+}
+@media (max-width: 480px) {
+  #heroContainer {
+    display: none;
+  }
+  #hero {
+    display: flex;
+    justify-content: center;
+  }
+  #heroMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 14px;
+  }
+  .swiper {
+    width: 393px;
+  }
+  #summaryCont {
+    margin-bottom: 0;
+  }
+  .tabComponent {
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-slide {
+    margin-top: 0;
+  }
+  .swiper {
+    padding-bottom: 0;
+  }
+}
